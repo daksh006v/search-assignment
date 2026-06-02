@@ -1,5 +1,5 @@
 const express = require("express");
-const { createNote, createBulkNotes, getAllNotes, getNoteById, replaceNote, updateNote, deleteNote, deleteBulkNotes, searchByTitle, searchByContent, searchAll, filterAndSort, filterAndPaginate, sortAndPaginate, searchAndFilter, searchSortPaginate, filterSortPaginate } = require("../controllers/note.controller");
+const { createNote, createBulkNotes, getAllNotes, getNoteById, replaceNote, updateNote, deleteNote, deleteBulkNotes, searchByTitle, searchByContent, searchAll, filterAndSort, filterAndPaginate, sortAndPaginate, searchAndFilter, searchSortPaginate, filterSortPaginate, masterQuery } = require("../controllers/note.controller");
 const router = express.Router();
 
 router.post("/bulk", createBulkNotes);
@@ -15,6 +15,7 @@ router.get("/sort-paginate", sortAndPaginate);
 router.get("/search-filter", searchAndFilter);
 router.get("/search-sort-paginate", searchSortPaginate);
 router.get("/filter-sort-paginate", filterSortPaginate);
+router.get("/query", masterQuery);
 
 router.post("/", createNote);
 router.get("/", getAllNotes);
