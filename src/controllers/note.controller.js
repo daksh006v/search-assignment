@@ -1,6 +1,40 @@
 const Note = require("../models/note.model");
 const mongoose = require("mongoose");
 
+const searchAll = async (req, res) => {
+  try {
+    const { q } = req.query;
+
+    if (!q) {
+      return res.status(400).json({
+        success: false,
+        message: "Search query 'q' is required",
+        data: null,
+      });
+    }
+
+    const notes = await Note.find({
+      $or: [
+        { title: { $regex: q, $options: "i" } },
+        { content: { $regex: q, $options: "i" } },
+      ],
+    });
+
+    res.status(200).json({
+      success: true,
+      message: `Search results for: ${q}`,
+      count: notes.length,
+      data: notes,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+      data: null,
+    });
+  }
+};
+
 const searchByContent = async (req, res) => {
   try {
     const { q } = req.query;
@@ -335,4 +369,5 @@ module.exports = {
   deleteBulkNotes,
   searchByTitle,
   searchByContent,
+  searchAll,
 };
