@@ -108,3 +108,6 @@ This project provides a robust backend solution with a unified querying mechanis
 
 ## Live Deployment
 **Deployed Backend:** [https://search-assignment.onrender.com/](https://search-assignment.onrender.com/)
+
+## API Documentation
+**Postman Docs:** [https://documenter.getpostman.com/view/50840953/2sBXwpMqhM](https://documenter.getpostman.com/view/50840953/2sBXwpMqhM)
