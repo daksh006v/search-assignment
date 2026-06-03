@@ -1,5 +1,8 @@
 # Notes App API
 
+**Live Deployment:** [https://search-assignment.onrender.com/](https://search-assignment.onrender.com/)  
+**API Documentation:** [https://documenter.getpostman.com/view/50840953/2sBXwpMqhM](https://documenter.getpostman.com/view/50840953/2sBXwpMqhM)
+
 ## Description
 A RESTful API built with Node.js, Express, and MongoDB for managing notes. This project implements comprehensive CRUD operations along with advanced querying capabilities, including case-insensitive search, filtering, sorting, and pagination. It features a master query endpoint designed to handle multiple query parameters simultaneously, demonstrating production-level API design.
 
@@ -105,9 +108,3 @@ This project provides a robust backend solution with a unified querying mechanis
      ```bash
      npm start
      ```
-
-## Live Deployment
-**Deployed Backend:** [https://search-assignment.onrender.com/](https://search-assignment.onrender.com/)
-
-## API Documentation
-**Postman Docs:** [https://documenter.getpostman.com/view/50840953/2sBXwpMqhM](https://documenter.getpostman.com/view/50840953/2sBXwpMqhM)
